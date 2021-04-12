@@ -1,0 +1,38 @@
+﻿  Layer.cpp
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Net.cpp
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,30): error C2143: syntax error: missing ',' before '&'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,30): error C2143: syntax error: missing ',' before '&'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(18,47): error C2440: '<function-style-cast>': cannot convert from 'unsigned int' to 'Neuron'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(18,47): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(37,47): error C2664: 'void Neuron::feedForward(const int)': cannot convert argument 1 from 'Layer' to 'const int'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(37,38): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,7): message : see declaration of 'Neuron::feedForward'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(59,2): error C2065: 'm_recentAverageError': undeclared identifier
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(59,26): error C2065: 'm_recentAverageError': undeclared identifier
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(59,49): error C2065: 'm_recentAverageSmoothingFactor': undeclared identifier
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(60,6): error C2065: 'm_recentAverageSmoothingFactor': undeclared identifier
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(64,37): error C2039: 'calcOutputGradients': is not a member of 'Neuron'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(11): message : see declaration of 'Neuron'
+  Neuron.cpp
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Net.cpp(70,1): error C2059: syntax error: '}'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Layer.h(4,21): error C2065: 'Neuron': undeclared identifier
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Layer.h(4,14): error C2923: 'std::vector': 'Neuron' is not a valid template type argument for parameter '_Ty'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(352,37): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(17,42): error C2662: 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type std::vector<_Ty,_Alloc>::size(void) noexcept const': cannot convert 'this' pointer from 'const Layer' to 'const std::vector<_Ty,_Alloc> &'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(17,42): message : Reason: cannot convert from 'const Layer' to 'const std::vector<_Ty,_Alloc>'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(17,27): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(1436,26): message : see declaration of 'std::vector<_Ty,_Alloc>::size'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(18,21): error C2678: binary '[': no operator found which takes a left-hand operand of type 'const Layer' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(1461,27): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(1451,21): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(18,21): message : while trying to match the argument list '(const Layer, unsigned int)'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(19,15): error C2678: binary '[': no operator found which takes a left-hand operand of type 'const Layer' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(1461,27): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(1451,21): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  The Neural Network.cpp
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\Neuron.cpp(19,15): message : while trying to match the argument list '(const Layer, unsigned int)'
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
+D:\Desktop\Watermark-Removal\Visual Studio Files\The Neural Network\neuron.h(17,30): error C2143: syntax error: missing ',' before '&'
