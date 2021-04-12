@@ -152,13 +152,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Layer.cpp" />
     <ClCompile Include="Net.cpp" />
     <ClCompile Include="Neuron.cpp" />
     <ClCompile Include="The Neural Network.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Layer.h" />
     <ClInclude Include="Net.h" />
     <ClInclude Include="Neuron.h" />
   </ItemGroup>

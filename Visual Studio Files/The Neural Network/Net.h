@@ -1,7 +1,8 @@
 #pragma once
 #include <vector>
-#include <Layer.h>
 #include <iostream>
+#include <Neuron.h>
+#include <assert.h>
 class Net
 {
 private:

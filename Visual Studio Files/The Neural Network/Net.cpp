@@ -1,7 +1,4 @@
-#include "Net.h"
-#include <Layer.h>
-#include <assert.h>
-
+#include <Net.h>
 Net::Net(const std::vector<unsigned>& topology)
 {
 	unsigned numLayers = topology.size();
@@ -15,7 +12,7 @@ Net::Net(const std::vector<unsigned>& topology)
 		//New Layer created, now filling it with neurons,
 		//and adding a bias to neurons in the layer
 		for (unsigned neuronNum = 0; neuronNum <= topology[layerNum]; ++neuronNum) {
-			m_layers.back().push_back(Neuron(numOutputs)); //m_layers.back() is the last layer.
+			m_layers.back().push_back(Neuron(numOutputs, neuronNum)); //m_layers.back() is the last layer.
 			//We are pushing a new neuron onto the last layer topology[layerNum] times
 			std::cout << "Made a new Neuron!" << std::endl;
 		}
@@ -58,9 +55,6 @@ void Net::backProp(const std::vector<double>& targetVals)
 
 
 
-	//Implement a recent average measurement:
-	m_recentAverageError = (m_recentAverageError * m_recentAverageSmoothingFactor + m_error)
-		/ (m_recentAverageSmoothingFactor + 1.0);
 
 	//Calculate output Layer Gradients
 	for (unsigned n = 0; n < outputLayer.size() - 1; ++n) {

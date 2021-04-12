@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include <cstdlib>
-#include <Layer.h>
 #include <cmath>
+class Neuron;
+typedef std::vector<Neuron> Layer;
 
 struct Connection {
 	double weight;
@@ -12,11 +13,11 @@ class Neuron
 {
 public:
 	Neuron(unsigned numOutputs, unsigned myIndex);
-	void setOutputVal(double val) { m_outputVal = val; }
-	double getOutputVal() const { return m_outputVal; }
-	void feedForward(const Layer& prevLayer);
+	void setOutputVal(double val) { m_outputVal = val; };
+	double getOutputVal() const { return m_outputVal; };
+	void feedForward(const Layer &prevLayer);
 	void calcOutputGradients(double targetVal);
-	void calcHiddenGradients(const Layer& nextLayer);
+	void calcHiddenGradients(const Layer &nextLayer);
 	void updateInputWeights(Layer &prevLayer);
 private:
 	static double randomWeight() { return rand() / double(RAND_MAX); }
@@ -30,6 +31,8 @@ private:
 	static double alpha; //[0.0...n] multiplier of last weight change (momentum)
 	std::vector<Connection> m_outputWeights; //Adjacencylist
 };
+
+
 
 
 
