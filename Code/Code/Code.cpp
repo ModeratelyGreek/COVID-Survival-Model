@@ -5,6 +5,7 @@
 #include <cmath>
 #include <fstream>
 #include <sstream>
+#include <Eigen/Dense>
 
 class TrainingData
 {
@@ -384,13 +385,38 @@ void train()
         std::cout<<std::endl<<"Done!"<<std::endl;
 }
 
+void linReg()
+{
+
+}
+
+void dataPicker()
+{
+    int in = 0;
+    while (true)
+    {
+        std::cout << "*********************************************************" << std::endl;
+        std::cout << "Enter mode: " << std::endl;
+        std::cout << "(1) Neural Network" << std::endl;
+        std::cout << "(2) Linear Regression" << std::endl;
+        int in;
+        std::cin >> in;
+        if (in > 0 && in < 2)
+            break;
+    }
+    if (in == 1)
+        train();
+    else
+        linReg();
+}
+
 void passKey()
 {
     int key;
     std::cout<<"Enter passkey: ";
     std::cin>>key;
     if(key == 1111)
-        train();
+        dataPicker();
 }
 
 void predict()

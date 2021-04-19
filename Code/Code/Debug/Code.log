@@ -1,9 +1,9 @@
 ﻿  Code.cpp
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(202,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(204,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(207,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(224,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(226,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(236,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(238,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(203,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(205,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(208,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(225,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(227,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(237,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(239,26): warning C4018: '<': signed/unsigned mismatch
   Code.vcxproj -> C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Debug\Code.exe
