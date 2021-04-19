@@ -82,7 +82,7 @@ class Neuron
         double sumDOW(const Layer &nextLayer) const;
 };
 
-double Neuron::eta = 0.20;
+double Neuron::eta = 0.35;
 double Neuron::alpha = 0.5;
 
 Neuron::Neuron(unsigned numOutputs, unsigned myIndex)
@@ -190,12 +190,8 @@ double Net::getRecentAverageError(int pass) const
 
 std::vector<double> Net::predict(std::vector<double> &in)
 {
-    Net::feedForward(in);
     std::vector<double> output;
-    for(auto it : m_layers.back())
-    {
-        output.push_back(it.getOutputVal());
-    }
+    Net::getResults(output);
     return output;
 }
 
@@ -262,7 +258,6 @@ Net::Net(const std::vector<unsigned>& topology)
 		for (unsigned neuronNum = 0; neuronNum <= topology[layerNum]; ++neuronNum) {
 			m_layers.back().push_back(Neuron(numOutputs, neuronNum)); //m_layers.back() is the last layer.
 			//We are pushing a new neuron onto the last layer topology[layerNum] times
-			std::cout << "Made a new Neuron!" << std::endl;
 		}
 
 		//Force the bias node's output value to 1.0. IT's the last neuron created above
@@ -495,6 +490,7 @@ void predict()
     myNet.loadWeights();
     std::vector<double> send = {outSex, outAge, outRace, outMed};
     std::vector<double> stats = myNet.predict(send);
+    myNet.viewWeights();
     std::cout<<"Hospitalization chance: "<<stats[0]*100<<"%\tICU chance: "<<stats[1]*100<<"%\tDeath chance: "<<stats[2]*100<<"%"<<std::endl;  
     
 }
