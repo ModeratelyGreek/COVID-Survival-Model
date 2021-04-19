@@ -1,9 +1,0 @@
-﻿  Upload.cpp
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(201,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(203,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(206,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(223,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(225,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(235,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\Upload\Upload\Upload.cpp(237,26): warning C4018: '<': signed/unsigned mismatch
-  Upload.vcxproj -> C:\Users\Sahaj\source\repos\Upload\Debug\Upload.exe
