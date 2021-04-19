@@ -51,6 +51,7 @@ void Net::backProp(const std::vector<double>& targetVals)
 	}
 	
 	m_error /= outputLayer.size() - 1; //Get average error squared
+	std::cout << m_error << std::endl;
 	m_error = sqrt(m_error); //Sqrt to get RMS
 
 

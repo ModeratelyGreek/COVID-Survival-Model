@@ -191,6 +191,7 @@ double Net::getRecentAverageError(int pass) const
 
 std::vector<double> Net::predict(std::vector<double> &in)
 {
+	Net::feedForward(in);
     std::vector<double> output;
     Net::getResults(output);
     return output;
@@ -389,153 +390,144 @@ void linReg()
 {
 
 }
+void predict()
+{
+	int inputSex;
+	int inputAge;
+	int inputRace;
+	int inputMed;
+	while (true)
+	{
+		system("CLS");
+		std::cout << "*********************************************************" << std::endl;
+		std::cout << "Covid Survival Model" << std::endl;
+		std::cout << "*********************************************************" << std::endl;
+		std::cout << "Enter Sex: " << std::endl;
+		std::cout << "(1) Female" << std::endl;
+		std::cout << "(2) Male" << std::endl;
+		std::cout << "(3) Other" << std::endl;
+		std::cout << "(4) Not applicable" << std::endl << ">";
+		std::cin >> inputSex;
 
-void dataPicker()
+		if (inputSex > 0 && inputSex < 5)
+			break;
+		else
+			std::cout << "Invalid input, try again..." << std::endl;
+	}
+
+	while (true)
+	{
+		std::cout << "*********************************************************" << std::endl;
+		std::cout << "Enter Age Group: " << std::endl;
+		std::cout << "(1) 0-9 Years" << std::endl;
+		std::cout << "(2) 10 - 19 Years" << std::endl;
+		std::cout << "(3) 20 - 29 Years" << std::endl;
+		std::cout << "(4) 30 - 39 Years" << std::endl;
+		std::cout << "(5) 40 - 49 Years" << std::endl;
+		std::cout << "(6) 50 - 59 Years" << std::endl;
+		std::cout << "(7) 60 - 69 Years" << std::endl;
+		std::cout << "(8) 70 - 79 Years" << std::endl;
+		std::cout << "(9) 80+ Years" << std::endl;
+		std::cout << "(10) N/A" << std::endl << ">";
+		std::cin >> inputAge;
+		if (inputAge > 0 && inputAge < 11)
+			break;
+		else
+			std::cout << "Invalid input, try again..." << std::endl;
+	}
+
+	while (true)
+	{
+		std::cout << "*********************************************************" << std::endl;
+		std::cout << "Enter Race:" << std::endl;
+		std::cout << "(1) American Indian/Alaska Native (Non-Hispanic)" << std::endl;
+		std::cout << "(2) Asian (Non-Hispanic)" << std::endl;
+		std::cout << "(3) Black (Non-Hispanic)" << std::endl;
+		std::cout << "(4) Hispanic/Latino" << std::endl;
+		std::cout << "(5) Native Hawaiian/Other Pacific Islander (Non-Hispanic)" << std::endl;
+		std::cout << "(6) White (Non-Hispanic)" << std::endl;
+		std::cout << "(7) Multiple/Other (Non-Hispanic)" << std::endl;
+		std::cout << "(8) N/A" << std::endl << ">";
+		std::cin >> inputRace;
+		if (inputRace > 0 && inputRace < 9)
+			break;
+		else
+			std::cout << "Invalid input, try again..." << std::endl;
+	}
+
+	while (true)
+	{
+		std::cout << "*********************************************************" << std::endl;
+		std::cout << "Pre-Existing Medical Conditions?" << std::endl;
+		std::cout << "(1) Yes" << std::endl;
+		std::cout << "(2) No" << std::endl << ">";
+		std::cin >> inputMed;
+		if (inputMed > 0 && inputMed < 3)
+			break;
+		else
+			std::cout << "Invalid input, try again..." << std::endl;
+	}
+
+	std::cout << "*********************************************************" << std::endl;
+	double numDiffSex = 4.0;
+	double numDiffAge = 10.0;
+	double numDiffRace = 8.0;
+
+	double outSex = inputSex / numDiffSex;
+	double outAge = inputAge / numDiffAge;
+	double outRace = inputRace / numDiffRace;
+	double outMed = inputMed - 1;
+
+	std::vector<unsigned int> topology;
+	topology.push_back(4);
+	topology.push_back(5);
+	topology.push_back(5);
+	topology.push_back(3);
+	Net myNet(topology);
+	myNet.loadWeights();
+	std::vector<double> send = { outSex, outAge, outRace, outMed };
+	std::vector<double> stats = myNet.predict(send);
+	myNet.viewWeights();
+	std::cout << "Hospitalization chance: " << stats[0] * 100 << "%\tICU chance: " << stats[1] * 100 << "%\tDeath chance: " << stats[2] * 100 << "%" << std::endl;
+
+}
+void nnPicker()
 {
     int in = 0;
     while (true)
     {
         std::cout << "*********************************************************" << std::endl;
         std::cout << "Enter mode: " << std::endl;
-        std::cout << "(1) Neural Network" << std::endl;
-        std::cout << "(2) Linear Regression" << std::endl;
-        int in;
+        std::cout << "(1) Train Neural Network" << std::endl;
+        std::cout << "(2) Predict Using NN" << std::endl;
+
         std::cin >> in;
-        if (in > 0 && in < 2)
-            break;
+
+		if (in == 1)
+			train();
+		else
+			predict();
     }
-    if (in == 1)
-        train();
-    else
-        linReg();
-}
-
-void passKey()
-{
-    int key;
-    std::cout<<"Enter passkey: ";
-    std::cin>>key;
-    if(key == 1111)
-        dataPicker();
-}
-
-void predict()
-{
-    int inputSex;
-    int inputAge;
-    int inputRace;
-    int inputMed;
-    while(true)
-    { 
-       system("CLS");
-       std::cout << "*********************************************************" << std::endl;
-       std::cout << "Covid Survival Model" << std::endl;
-       std::cout << "*********************************************************"<<std::endl;
-       std::cout << "Enter Sex: " << std::endl;
-       std::cout << "(1) Female" << std::endl;
-       std::cout << "(2) Male" << std::endl;
-       std::cout << "(3) Other" << std::endl;
-       std::cout << "(4) Not applicable" << std::endl<<">";
-       std::cin >> inputSex;
-
-        if(inputSex > 0 && inputSex < 5)
-            break;
-        else
-           std::cout<<"Invalid input, try again..."<<std::endl;
-    }
-
-    while (true)
-    {
-       std::cout << "*********************************************************"<<std::endl;
-       std::cout << "Enter Age Group: " << std::endl;
-       std::cout << "(1) 0-9 Years" << std::endl;
-       std::cout << "(2) 10 - 19 Years" << std::endl;
-       std::cout << "(3) 20 - 29 Years" << std::endl;
-       std::cout << "(4) 30 - 39 Years" << std::endl;
-       std::cout << "(5) 40 - 49 Years" << std::endl;
-       std::cout << "(6) 50 - 59 Years" << std::endl;
-       std::cout << "(7) 60 - 69 Years" << std::endl;
-       std::cout << "(8) 70 - 79 Years" << std::endl;
-       std::cout << "(9) 80+ Years" << std::endl;
-       std::cout << "(10) N/A" << std::endl << ">";
-       std::cin >> inputAge;
-        if(inputAge > 0 && inputAge < 11)
-            break;
-        else
-           std::cout<<"Invalid input, try again..."<<std::endl;
-    }
-
-    while(true)
-    {
-       std::cout << "*********************************************************"<<std::endl;
-       std::cout << "Enter Race:" << std::endl;
-       std::cout << "(1) American Indian/Alaska Native (Non-Hispanic)" << std::endl;
-       std::cout << "(2) Asian (Non-Hispanic)" << std::endl;
-       std::cout << "(3) Black (Non-Hispanic)" << std::endl;
-       std::cout << "(4) Hispanic/Latino" << std::endl;
-       std::cout << "(5) Native Hawaiian/Other Pacific Islander (Non-Hispanic)" << std::endl;
-       std::cout << "(6) White (Non-Hispanic)" << std::endl;
-       std::cout << "(7) Multiple/Other (Non-Hispanic)" << std::endl;
-       std::cout << "(8) N/A" << std::endl << ">";
-       std::cin >> inputRace;
-        if(inputRace > 0 && inputRace < 9)
-            break;
-        else
-           std::cout<<"Invalid input, try again..."<<std::endl;
-    }
-
-    while(true)
-    {
-       std::cout << "*********************************************************"<<std::endl;
-       std::cout << "Pre-Existing Medical Conditions?" << std::endl;
-       std::cout << "(1) Yes" << std::endl;
-       std::cout << "(2) No" << std::endl << ">";
-       std::cin >> inputMed;
-        if(inputMed > 0 && inputMed < 3)
-            break;
-        else
-           std::cout<<"Invalid input, try again..."<<std::endl;
-    }
-
-   std::cout << "*********************************************************"<<std::endl;
-    double numDiffSex = 4.0;
-	double numDiffAge = 10.0;
-	double numDiffRace = 8.0;
-	
-	double outSex = inputSex/numDiffSex;
-	double outAge = inputAge/numDiffAge;
-	double outRace = inputRace/numDiffRace;
-    double outMed = inputMed - 1;
-
-    std::vector<unsigned int> topology;
-    topology.push_back(4);
-    topology.push_back(5);
-    topology.push_back(5);
-    topology.push_back(3);
-    Net myNet(topology);
-    myNet.loadWeights();
-    std::vector<double> send = {outSex, outAge, outRace, outMed};
-    std::vector<double> stats = myNet.predict(send);
-    myNet.viewWeights();
-    std::cout<<"Hospitalization chance: "<<stats[0]*100<<"%\tICU chance: "<<stats[1]*100<<"%\tDeath chance: "<<stats[2]*100<<"%"<<std::endl;  
     
 }
+
+
 
 int main()
 {
     while(true)
     {
         int input;
-        std::cout<<"Mode select:"<<std::endl<<"(1) Train network"<<std::endl<<"(2) Predict"<<std::endl<<"> ";
+        std::cout<<"Mode select:"<<std::endl<<"(1) Neural Network"<<std::endl<<"(2) Linear Regression"<<std::endl<<"> "; //Nice touch with the arrow here
         std::cin >> input;
 
         switch (input)
         {
         case 1:
-            passKey();
+            nnPicker();
             break;
         case 2:
-            predict();
+            linReg();
         default:
             break;
         }

@@ -1,9 +1,9 @@
 ﻿  Code.cpp
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(203,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(205,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(208,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(225,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(227,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(237,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(239,26): warning C4018: '<': signed/unsigned mismatch
-  Code.vcxproj -> C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Debug\Code.exe
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(204,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(206,26): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(209,18): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(226,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(228,26): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(238,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(240,26): warning C4018: '<': signed/unsigned mismatch
+  Code.vcxproj -> D:\Desktop\Watermark-Removal\Code\Debug\Code.exe
