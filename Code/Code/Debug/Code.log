@@ -1,0 +1,9 @@
+﻿  Code.cpp
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(206,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(208,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(211,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(228,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(230,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(240,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\Code\Code\Code.cpp(242,26): warning C4018: '<': signed/unsigned mismatch
+  Code.vcxproj -> C:\Users\Sahaj\source\repos\Code\Debug\Code.exe
