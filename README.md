@@ -10,3 +10,10 @@ The program offers 2 main options:
 The neural network structure would need to be tweaked to get better output data, as we seem to think.
 
 On program start, it may take a minute or 2 to start up, as all of the linear regression calculations are occuring before the user can choose what to do.
+
+**IMPORTANT**
+This program was almost entirely developed in Visual Studio 2019
+Eigen3 may not work properly for you, in which case you would reinstall it with the nuGet package manager.
+  To do so refer to the documentation here: https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio
+  
+Otherwise, stay safe, wear your mask, and enjoy! :D
