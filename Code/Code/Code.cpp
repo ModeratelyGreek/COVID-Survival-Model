@@ -70,12 +70,12 @@ class Neuron
         void calcOutputGradients(double targetVal);
         void calcHiddenGradients(const Layer &nextLayer);
         void updateInputWeights(Layer &prevLayer);
+		std::vector<Connection> m_outputWeights;
     private:
         static double eta;
         static double alpha;
         static double randomWeight(void) { return rand() / double(RAND_MAX);}
         double m_outputVal;
-        std::vector<Connection> m_outputWeights;
         unsigned int m_myIndex;
         static double transferFunction(double x);
         static double transferFunctionDerivative(double x);
@@ -86,7 +86,7 @@ class Neuron
 double Neuron::eta = 0.35;
 double Neuron::alpha = 0.5;
 
-Neuron::Neuron(unsigned numOutputs, unsigned myIndex)
+Neuron::Neuron(unsigned int numOutputs, unsigned int myIndex)
 {
 	for (unsigned c = 0; c < numOutputs; ++c) {
 		m_outputWeights.push_back(Connection());
@@ -201,15 +201,21 @@ void Net::saveWeights()
 {
     std::ofstream out;
     out.open("weights.csv");
-    for(int i = 0; i < m_layers.size(); i++)
+    for(int i = 0; i < m_layers.size()-1; i++) //for each layer except last one
     {
-        for(int j = 0; j < m_layers[i].size(); j++)
+        for(int j = 0; j < m_layers[i].size(); j++) //for each neuron in each layer
         {
-            out<<m_layers[i][j].getOutputVal();
-            if(j < m_layers[i].size()-1)
-                out<<",";
-            else out<<std::endl;
+			for (int k = 0; k < m_layers[i + 1].size()-1; k++) 
+			{
+				out << m_layers[i][j].m_outputWeights[k].weight;
+				if (k < m_layers[i+1].size() - 2)
+					out << ",";
+				else out << std::endl;
+			}
+            
+            
         }
+		out << std::endl;
     }
 }
 
@@ -219,17 +225,21 @@ void Net::loadWeights()
     in.open("weights.csv");
 
     std::string line;
-    std::getline(in, line);
-    std::stringstream ss(line);
     std::string data;
 
-    for(int i = 0; i < m_layers.size(); i++)
+    for(int i = 0; i < m_layers.size()-1; i++) //for each layer except last one
     {
-        for(int j = 0; j < m_layers[i].size(); j++)
+        for(int j = 0; j < m_layers[i].size(); j++) //for each neuron in each layer
         {
-            getline(ss, data, ',');
-            m_layers[i][j].setOutputVal(stod(data));
+			std::getline(in, line);
+			std::stringstream ss(line);
+			for (int k = 0; k < m_layers[i + 1].size()-1; k++) 
+			{
+				getline(ss, data, ',');
+				m_layers[i][j].m_outputWeights[k].weight = std::stod(data);
+			}            
         }
+		std::getline(in, line);
     }
 }
 
@@ -366,7 +376,7 @@ void train()
     while (!trainData.isEof())
     {
         trainingPass++;
-        std::cout<<std::endl<<"Pass "<<trainingPass;
+		
         if(trainData.getData(inputVals, targetVals).first != topology[0])
             break;
         
@@ -380,7 +390,11 @@ void train()
 
         myNet.backProp(targetVals);
         //myNet.viewWeights();
-        std::cout<<"\tError: "<<myNet.getRecentAverageError(trainingPass) << std::endl;
+		if (trainingPass % 1000 == 0) {
+			std::cout << std::endl << "Pass " << trainingPass;
+			std::cout << "\tError: " << myNet.getRecentAverageError(trainingPass) << std::endl;
+		}
+        
     }
         myNet.saveWeights();
         std::cout<<std::endl<<"Done!"<<std::endl;
@@ -388,6 +402,7 @@ void train()
 
 void linReg()
 {
+
 
 }
 void predict()
@@ -398,7 +413,7 @@ void predict()
 	int inputMed;
 	while (true)
 	{
-		system("CLS");
+		//system("CLS");
 		std::cout << "*********************************************************" << std::endl;
 		std::cout << "Covid Survival Model" << std::endl;
 		std::cout << "*********************************************************" << std::endl;
@@ -510,8 +525,6 @@ void nnPicker()
     }
     
 }
-
-
 
 int main()
 {

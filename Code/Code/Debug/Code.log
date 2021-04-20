@@ -1,9 +1,11 @@
 ﻿  Code.cpp
 D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(204,22): warning C4018: '<': signed/unsigned mismatch
 D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(206,26): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(209,18): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(226,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(228,26): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(238,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(240,26): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(208,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(211,11): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(230,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(232,26): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(236,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(248,22): warning C4018: '<': signed/unsigned mismatch
+D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(250,26): warning C4018: '<': signed/unsigned mismatch
   Code.vcxproj -> D:\Desktop\Watermark-Removal\Code\Debug\Code.exe
