@@ -405,6 +405,7 @@ void linReg()
 
 
 }
+
 void predict()
 {
 	int inputSex;
