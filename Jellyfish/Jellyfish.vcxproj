@@ -123,20 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Code\Code\main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Code\Code\Net.cpp" />
-    <ClCompile Include="..\..\..\..\..\Code\Code\Neuron.cpp" />
-    <ClCompile Include="..\..\..\..\..\Code\Code\TrainingData.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Code\Code\Net.h" />
-    <ClInclude Include="..\..\..\..\..\Code\Code\Neuron.h" />
-    <ClInclude Include="..\..\..\..\..\Code\Code\TrainingData.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\Code\Code\data.csv" />
-    <None Include="..\..\..\..\..\Code\Code\weights.csv" />
+    <None Include="data.csv" />
     <None Include="packages.config" />
+    <None Include="weights.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Net.cpp" />
+    <ClCompile Include="Neuron.cpp" />
+    <ClCompile Include="TrainingData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Net.h" />
+    <ClInclude Include="Neuron.h" />
+    <ClInclude Include="TrainingData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

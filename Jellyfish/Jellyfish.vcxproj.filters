@@ -15,37 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Code\Code\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Code\Code\Net.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Code\Code\Neuron.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Code\Code\TrainingData.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Code\Code\Net.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Code\Code\Neuron.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Code\Code\TrainingData.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\Code\Code\data.csv">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\..\..\Code\Code\weights.csv">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="packages.config" />
+    <None Include="weights.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Net.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Neuron.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrainingData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Net.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Neuron.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrainingData.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
