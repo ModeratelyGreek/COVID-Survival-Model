@@ -1,11 +1,11 @@
 ﻿  Code.cpp
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(205,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(207,26): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(209,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(212,11): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(231,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(233,26): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(237,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(249,22): warning C4018: '<': signed/unsigned mismatch
-D:\Desktop\Watermark-Removal\Code\Code\Code.cpp(251,26): warning C4018: '<': signed/unsigned mismatch
-  Code.vcxproj -> D:\Desktop\Watermark-Removal\Code\Debug\Code.exe
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(205,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(207,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(209,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(212,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(231,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(233,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(237,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(249,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Code\Code.cpp(251,26): warning C4018: '<': signed/unsigned mismatch
+  Code.vcxproj -> C:\Users\Sahaj\source\repos\COVID-Survival-Model\Code\Debug\Code.exe

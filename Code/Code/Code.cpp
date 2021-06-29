@@ -361,10 +361,10 @@ void train()
 {
     TrainingData trainData("data.csv");
     std::vector<unsigned int> topology;
-    topology.push_back(4);
-    topology.push_back(5);
-    topology.push_back(5);
-	topology.push_back(5);
+    topology.push_back(19);
+    topology.push_back(15);
+    topology.push_back(12);
+	topology.push_back(8);
 	topology.push_back(5);
     topology.push_back(3);
     Net myNet(topology);
@@ -409,29 +409,73 @@ void loadMatrices(Eigen::MatrixXd &A, Eigen::MatrixXd &out1, Eigen::MatrixXd &ou
 	in.open("data.csv");
 	std::string data;
 	std::getline(in, data, '\n'); //ditch the first line
-	for (int i = 0; i < 642426; i++) //for each layer except last one
+	for (int i = 0; i < 805903; i++) //for each layer except last one
 	{
-		std::getline(in, data, ','); //ditch date double
-		std::getline(in, data, ','); //sex
+		std::getline(in, data, ','); //isMale
 		A(i, 0) = stod(data);
 
-		std::getline(in, data, ','); //age
+		std::getline(in, data, ','); //isFemale
 		A(i, 1) = stod(data);
 
-		std::getline(in, data, ','); //race
+		std::getline(in, data, ','); //is0_9
 		A(i, 2) = stod(data);
 
-		std::getline(in, data, ','); //med
+		std::getline(in, data, ','); //is10_19
 		A(i, 3) = stod(data);
+
+		std::getline(in, data, ','); //is20_29
+		A(i, 4) = stod(data);
+		
+		std::getline(in, data, ','); //is30_39
+		A(i, 5) = stod(data);
+		
+		std::getline(in, data, ','); //is40_49
+		A(i, 6) = stod(data);
+		
+		std::getline(in, data, ','); //is50_59
+		A(i, 7) = stod(data);
+		
+		std::getline(in, data, ','); //is60_69
+		A(i, 8) = stod(data);
+		
+		std::getline(in, data, ','); //is70_79
+		A(i, 9) = stod(data);
+		
+		std::getline(in, data, ','); //is80+
+		A(i, 10) = stod(data);
+		
+		std::getline(in, data, ','); //isMult
+		A(i, 11) = stod(data);
+		
+		std::getline(in, data, ','); //isHisp
+		A(i, 12) = stod(data);
+		
+		std::getline(in, data, ','); //isWhite
+		A(i, 13) = stod(data);
+		
+		std::getline(in, data, ','); //isBlack
+		A(i, 14) = stod(data);
+		
+		std::getline(in, data, ','); //isAsian
+		A(i, 15) = stod(data);
+		
+		std::getline(in, data, ','); //isNatHaw
+		A(i, 16) = stod(data);
+		
+		std::getline(in, data, ','); //isAmInd
+		A(i, 17) = stod(data);
 
 		std::getline(in, data, ','); //isHospitalized?
 		out1(i, 0) = stod(data);
 
 		std::getline(in, data, ','); //isICU?
-		out2(i, 0) = stod(data);
+		out2(i, 0)= stod(data);
 
 		std::getline(in, data, ','); //isDead?
 		out3(i, 0) = stod(data);
+
+		std::getline(in, data, ','); //med
+		A(i, 18) = stod(data);
 
 	}
 }
@@ -616,10 +660,10 @@ int main()
 {
 	std::cout << "Please Wait while linear regression computes for dataset." << std::endl;
 	//Calculate matrix stuff first:
-	Eigen::MatrixXd a(642426, 4); //4 columns of input data: Gender, Age, Ethnicity, preExisting?
-	Eigen::MatrixXd b1(642426, 1); //giant column of isHospitalized?
-	Eigen::MatrixXd b2(642426, 1); //giant column of isICU?
-	Eigen::MatrixXd b3(642426, 1); //giant column of isDead?
+	Eigen::MatrixXd a(805906, 19); //4 columns of input data: Gender, Age, Ethnicity, preExisting?
+	Eigen::MatrixXd b1(805906, 1); //giant column of isHospitalized?
+	Eigen::MatrixXd b2(805906, 1); //giant column of isICU?
+	Eigen::MatrixXd b3(805906, 1); //giant column of isDead?
 
 	loadMatrices(a, b1, b2, b3);
 
